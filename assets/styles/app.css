@@ -1,0 +1,455 @@
+@import './reset.css';
+@import './font.css';
+@import './variables.css';
+@import './help.css';
+@import './responsive.css';
+
+/* ----------------------- header ----------------------- */
+header {
+  position: relative;
+  z-index: 3;
+  background: url(../images/avadabarbers-homepage-hero-bg.jpg) center center no-repeat;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #000;
+  padding: 1.7rem 0;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-logo {
+  width: 200px;
+}
+.header__nav-logo img {
+  width: 100%;
+}
+.header__nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header__nav-icons .header__nav-label--bars {
+  color: var(--gold-color);
+}
+.header__nav-icon {
+  color: #fff;
+}
+.header__nav-icons i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.header__nav-input, #header__nav-close {
+  display: none;
+}
+.header__nav-input:checked~.header__nav-list {
+  left: 0;
+}
+.header__nav-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: var(--primary-transition);
+}
+.header__nav-label--close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+}
+#header__nav-close:checked~.header__nav-list {
+  left: 100%;
+}
+.header__nav-item {
+  position: relative;
+  margin: 1.4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.header__nav-item:hover {
+  color: var(--gold-color);
+}
+.header__nav-item:hover .header__nav-list {
+  background-color: red !important;
+}
+.header__nav-item--active {
+  color: var(--gold-color);
+}
+.header__nav {}
+.header__nav-logo {}
+.header__nav-icons {}
+.icon-shopping-cart {}
+.header__nav-icon {}
+.header-part2-title {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  gap: 30px;
+  flex-direction: column;
+  width: 60%;
+}
+.header-part2-title>h1 {
+  font-family: Abril Fatface;
+  font-size: 87px;
+  font-style: normal;
+  color: #f5f5f5;
+}
+.header-part2-title>h1 :first-child {
+  border-bottom: 5px solid var(--gold-color);
+}
+.header-part2-title>span {
+  display: block;
+  color: #686868;
+  font-size: 24px;
+  font-family: lato;
+}
+.header-part2-image {
+  width: 40%;
+}
+.header-part2-image>img {
+  width: 100%;
+}
+
+/* ----------------------- main ----------------------- */
+.main {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+/* ----------------------- Pro Barbers ----------------------- */
+.probarbers {
+  flex-direction: column;
+  background: url(./../images/avadabarbers-about-introbackground.jpg) center top no-repeat;
+  background-size: cover;
+  padding: 70px 0 170px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 80%, 0% 100%);
+}
+.probarbers>.title-h2 {
+  font-size: 77px;
+}
+.probarbers .button-posts {
+  margin-top: 20px;
+  padding: 17px 15px !important;
+  width: 20%;
+}
+
+/* ----------------------- Services ----------------------- */
+.services {
+  padding: 80px 0;
+}
+.services-products {
+  margin: 70px 0;
+  justify-content: space-between !important;
+}
+.services-product {
+  width: 30%;
+}
+.services-product>a {
+  flex-direction: column;
+  gap: 10px;
+}
+.services-product-image {
+  width: 20%;
+}
+.services-product i {
+  color: var(--gold-color);
+  font-family: Abril Fatface;
+  font-size: 32px;
+  margin: 25px 0;
+}
+.services-product>p {
+  text-align: center;
+  padding: 0 60px;
+  line-height: 30px;
+}
+
+/* ----------------------- Shop ----------------------- */
+.store {
+  background: url(./../images/avadabarbers-reviewsbackground.jpg) center center no-repeat;
+  background-size: cover;
+  clip-path: polygon(50% 0%, 100% 16%, 100% 100%, 0 100%, 0% 16%);
+  padding: 80px 0 170px;
+}
+.store .title-h3 {
+  margin-top: 60px;
+}
+.products {
+  width: 100%;
+  margin: 40px 0 90px;
+}
+.product {
+  width: 25%;
+}
+.product>a img {
+  width: 100%;
+}
+.product>a+span {
+  text-transform: capitalize;
+  font-size: 32px;
+  font-family: Abril Fatface !important;
+}
+.product>span {
+  display: block;
+  color: var(--gold-color);
+  font-family: lato;
+}
+.button-store {
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+  transition: var(--primary-transition);
+}
+.button-store:hover {
+  color: var(--gold-color) !important;
+  border-color: var(--gold-color) !important;
+}
+
+/* ----------------------- Shave ----------------------- */
+.shave {
+  display: flex;
+  border-top: 5px solid var(--gold-color);
+  background-color: black;
+  margin-top: -80px !important;
+  position: relative;
+  z-index: 3;
+}
+.shave-image {
+  width: 80%;
+  background: linear-gradient(rgba(0, 0, 0, 0.797), rgba(0, 0, 0, 0.797)),
+    url(./../images/avadabarbers-second-blog.jpg) center center no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.shave-image>img {
+  width: 90%;
+  object-fit: cover;
+}
+.shave-text {
+  padding: 68px;
+  color: var(--text-color);
+}
+.shave-text>p {
+  padding: 50px 0;
+  font-size: 18px;
+  line-height: 25px;
+}
+.shave-text>a {
+  padding: 20px;
+  text-transform: uppercase;
+}
+.shave-text>.title-h3 {
+  font-size: 16px;
+}
+.shave-text>.title-h2 {
+  font-size: 70px;
+}
+
+/* ----------------------- Shave ----------------------- */
+.reviews {
+  width: 100%;
+  padding: 80px 0;
+}
+.reviews-customers {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-customer {
+  width: 25%;
+  flex-direction: column;
+}
+.reviews-customer>p {
+  line-height: 2;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.reviews-customer-image {
+  width: 120px;
+  margin: 30px 0;
+}
+.reviews-customer-image>img {
+  width: 100%;
+  border-radius: 50%;
+}
+.reviews-customer>span {
+  font-family: lato-bold-italic;
+  font-size: 18px;
+  color: var(--gold-color);
+}
+
+/* ----------------------- Recent Blog Posts ----------------------- */
+.posts {
+  background-color: #f5f5f5;
+  padding: 140px 0 80px;
+  clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0% 100%, 0% 0%);
+}
+.posts-title {
+  flex-direction: column;
+  word-spacing: 10px;
+  margin: 75px 0 45px;
+}
+.blog-post {
+  justify-content: space-between !important;
+}
+.blog {
+  width: 31%;
+  flex-direction: column;
+  gap: 20px;
+  color: #686868;
+}
+.blog-image {
+  width: 100%;
+}
+.blog-image>img {
+  width: 100%;
+  height: 35%;
+}
+.blog :nth-child(2) {
+  font-size: 34px;
+  color: var(--gold-color);
+  font-family: Abril Fatface;
+}
+.blog>span {
+  border-top: 1px solid #6868684f;
+  border-bottom: 1px solid #6868684f;
+  padding: 8px;
+  font-size: 12px;
+  width: 100%;
+}
+.blog>p {
+  line-height: 34px;
+  margin-bottom: 20px;
+  padding: 0 25px;
+}
+.button-posts {
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 17px 40px !important;
+  width: 31%;
+  transition: var(--primary-transition);
+}
+
+/* ----------------------- Follow Us ----------------------- */
+.follow {
+  width: 100%;
+  padding: 60px 30px;
+  background-color: rgb(15, 15, 15);
+  flex-wrap: wrap;
+}
+.follow .center {
+  justify-content: space-between;
+  position: relative;
+}
+.follow>.container>div {
+  width: 30%;
+}
+.follow-image-button {
+  flex-direction: column;
+  gap: 30px;
+}
+.follow-image>img {
+  width: 100%;
+  object-fit: cover;
+}
+.follow-center {
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-color);
+  font-size: 16px;
+}
+.follow-center-image {
+  width: 200px;
+  margin-bottom: 50px;
+}
+.follow-center-image>img {
+  width: 100%;
+}
+.follow-center :nth-child(7) {
+  margin-top: 50px;
+  color: var(--gold-color) !important;
+}
+.social-medias {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12.8px;
+  gap: 20px;
+}
+.social-media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+.social-media--icon {
+  position: relative;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+.social-media--span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: lato;
+  opacity: 0;
+  transition: var(--primary-transition);
+}
+.social-media--icon:hover~.social-media--span {
+  opacity: 1;
+}
+.social-media--span::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 4px solid transparent;
+  border-bottom-color: #2c2c2c;
+}
+
+/* ----------------------- Footer ----------------------- */
+.footer {
+  position: sticky;
+  width: 100%;
+  background-color: rgba(23, 23, 23, 1);
+  font-family: sans-serif;
+  font-size: 13px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.footer-end {
+  padding: 30px;
+}
+.footer p a {
+  color: var(--gold-color);
+}
