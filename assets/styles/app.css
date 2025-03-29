@@ -1,14 +1,22 @@
-@import './reset.css';
-@import './font.css';
-@import './variables.css';
-@import './help.css';
-@import './responsive.css';
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import "./reset.css";
+@import "./font.css";
+@import "./variables.css";
+@import "./help.css";
+@import "./responsive.css";
 
 /* ----------------------- header ----------------------- */
 header {
   position: relative;
   z-index: 3;
-  background: url(../images/avadabarbers-homepage-hero-bg.jpg) center center no-repeat;
+  background: url(../images/avadabarbers-homepage-hero-bg.jpg) center center
+    no-repeat;
   width: 100%;
   background-size: cover;
   overflow: hidden;
@@ -24,8 +32,14 @@ nav {
   padding: 1.7rem 0;
 }
 .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .header__nav-logo {
@@ -35,8 +49,14 @@ nav {
   width: 100%;
 }
 .header__nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
 }
@@ -50,10 +70,11 @@ nav {
   font-size: 1.8rem;
   cursor: pointer;
 }
-.header__nav-input, #header__nav-close {
+.header__nav-input,
+#header__nav-close {
   display: none;
 }
-.header__nav-input:checked~.header__nav-list {
+.header__nav-input:checked ~ .header__nav-list {
   left: 0;
 }
 .header__nav-list {
@@ -63,11 +84,22 @@ nav {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   overflow-x: hidden;
+  -webkit-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
   transition: var(--primary-transition);
 }
 .header__nav-label--close {
@@ -76,7 +108,7 @@ nav {
   right: 30px;
   color: #fff;
 }
-#header__nav-close:checked~.header__nav-list {
+#header__nav-close:checked ~ .header__nav-list {
   left: 100%;
 }
 .header__nav-item {
@@ -85,6 +117,8 @@ nav {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 .header__nav-item:hover {
@@ -96,29 +130,43 @@ nav {
 .header__nav-item--active {
   color: var(--gold-color);
 }
-.header__nav {}
-.header__nav-logo {}
-.header__nav-icons {}
-.icon-shopping-cart {}
-.header__nav-icon {}
+.header__nav {
+}
+.header__nav-logo {
+}
+.header__nav-icons {
+}
+.icon-shopping-cart {
+}
+.header__nav-icon {
+}
 .header-part2-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: start;
   gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 60%;
 }
-.header-part2-title>h1 {
+.header-part2-title > h1 {
   font-family: Abril Fatface;
   font-size: 87px;
   font-style: normal;
   color: #f5f5f5;
 }
-.header-part2-title>h1 :first-child {
+.header-part2-title > h1 :first-child {
   border-bottom: 5px solid var(--gold-color);
 }
-.header-part2-title>span {
+.header-part2-title > span {
   display: block;
   color: #686868;
   font-size: 24px;
@@ -127,7 +175,7 @@ nav {
 .header-part2-image {
   width: 40%;
 }
-.header-part2-image>img {
+.header-part2-image > img {
   width: 100%;
 }
 
@@ -140,13 +188,18 @@ nav {
 
 /* ----------------------- Pro Barbers ----------------------- */
 .probarbers {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  background: url(./../images/avadabarbers-about-introbackground.jpg) center top no-repeat;
+  background: url(./../images/avadabarbers-about-introbackground.jpg) center top
+    no-repeat;
   background-size: cover;
   padding: 70px 0 170px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 80%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 80%, 0% 100%);
 }
-.probarbers>.title-h2 {
+.probarbers > .title-h2 {
   font-size: 77px;
 }
 .probarbers .button-posts {
@@ -161,12 +214,17 @@ nav {
 }
 .services-products {
   margin: 70px 0;
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
   justify-content: space-between !important;
 }
 .services-product {
   width: 30%;
 }
-.services-product>a {
+.services-product > a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
@@ -179,7 +237,7 @@ nav {
   font-size: 32px;
   margin: 25px 0;
 }
-.services-product>p {
+.services-product > p {
   text-align: center;
   padding: 0 60px;
   line-height: 30px;
@@ -187,8 +245,10 @@ nav {
 
 /* ----------------------- Shop ----------------------- */
 .store {
-  background: url(./../images/avadabarbers-reviewsbackground.jpg) center center no-repeat;
+  background: url(./../images/avadabarbers-reviewsbackground.jpg) center center
+    no-repeat;
   background-size: cover;
+  -webkit-clip-path: polygon(50% 0%, 100% 16%, 100% 100%, 0 100%, 0% 16%);
   clip-path: polygon(50% 0%, 100% 16%, 100% 100%, 0 100%, 0% 16%);
   padding: 80px 0 170px;
 }
@@ -202,15 +262,15 @@ nav {
 .product {
   width: 25%;
 }
-.product>a img {
+.product > a img {
   width: 100%;
 }
-.product>a+span {
+.product > a + span {
   text-transform: capitalize;
   font-size: 32px;
   font-family: Abril Fatface !important;
 }
-.product>span {
+.product > span {
   display: block;
   color: var(--gold-color);
   font-family: lato;
@@ -218,6 +278,8 @@ nav {
 .button-store {
   color: var(--text-color) !important;
   border-color: var(--text-color) !important;
+  -webkit-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
   transition: var(--primary-transition);
 }
 .button-store:hover {
@@ -227,6 +289,8 @@ nav {
 
 /* ----------------------- Shave ----------------------- */
 .shave {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-top: 5px solid var(--gold-color);
   background-color: black;
@@ -236,32 +300,44 @@ nav {
 }
 .shave-image {
   width: 80%;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.797)),
+      to(rgba(0, 0, 0, 0.797))
+    ),
+    url(./../images/avadabarbers-second-blog.jpg) center center no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.797), rgba(0, 0, 0, 0.797)),
+    url(./../images/avadabarbers-second-blog.jpg) center center no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.797), rgba(0, 0, 0, 0.797)),
     url(./../images/avadabarbers-second-blog.jpg) center center no-repeat;
   background-size: cover;
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-.shave-image>img {
+.shave-image > img {
   width: 90%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .shave-text {
   padding: 68px;
   color: var(--text-color);
 }
-.shave-text>p {
+.shave-text > p {
   padding: 50px 0;
   font-size: 18px;
   line-height: 25px;
 }
-.shave-text>a {
+.shave-text > a {
   padding: 20px;
   text-transform: uppercase;
 }
-.shave-text>.title-h3 {
+.shave-text > .title-h3 {
   font-size: 16px;
 }
-.shave-text>.title-h2 {
+.shave-text > .title-h2 {
   font-size: 70px;
 }
 
@@ -272,15 +348,24 @@ nav {
 }
 .reviews-customers {
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .reviews-customer {
   width: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
-.reviews-customer>p {
+.reviews-customer > p {
   line-height: 2;
   letter-spacing: 1px;
   text-align: center;
@@ -289,11 +374,11 @@ nav {
   width: 120px;
   margin: 30px 0;
 }
-.reviews-customer-image>img {
+.reviews-customer-image > img {
   width: 100%;
   border-radius: 50%;
 }
-.reviews-customer>span {
+.reviews-customer > span {
   font-family: lato-bold-italic;
   font-size: 18px;
   color: var(--gold-color);
@@ -303,18 +388,27 @@ nav {
 .posts {
   background-color: #f5f5f5;
   padding: 140px 0 80px;
+  -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0% 100%, 0% 0%);
   clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0% 100%, 0% 0%);
 }
 .posts-title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   word-spacing: 10px;
   margin: 75px 0 45px;
 }
 .blog-post {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
   justify-content: space-between !important;
 }
 .blog {
   width: 31%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 20px;
   color: #686868;
@@ -322,23 +416,22 @@ nav {
 .blog-image {
   width: 100%;
 }
-.blog-image>img {
+.blog-image > img {
   width: 100%;
-  height: 35%;
 }
 .blog :nth-child(2) {
   font-size: 34px;
   color: var(--gold-color);
   font-family: Abril Fatface;
 }
-.blog>span {
+.blog > span {
   border-top: 1px solid #6868684f;
   border-bottom: 1px solid #6868684f;
   padding: 8px;
   font-size: 12px;
   width: 100%;
 }
-.blog>p {
+.blog > p {
   line-height: 34px;
   margin-bottom: 20px;
   padding: 0 25px;
@@ -348,6 +441,8 @@ nav {
   margin-top: 20px;
   padding: 17px 40px !important;
   width: 31%;
+  -webkit-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
   transition: var(--primary-transition);
 }
 
@@ -356,24 +451,34 @@ nav {
   width: 100%;
   padding: 60px 30px;
   background-color: rgb(15, 15, 15);
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .follow .center {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
 }
-.follow>.container>div {
+.follow > .container > div {
   width: 30%;
 }
 .follow-image-button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 30px;
 }
-.follow-image>img {
+.follow-image > img {
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .follow-center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
   color: var(--text-color);
@@ -383,7 +488,7 @@ nav {
   width: 200px;
   margin-bottom: 50px;
 }
-.follow-center-image>img {
+.follow-center-image > img {
   width: 100%;
 }
 .follow-center :nth-child(7) {
@@ -391,16 +496,29 @@ nav {
   color: var(--gold-color) !important;
 }
 .social-medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 12.8px;
   gap: 20px;
 }
 .social-media {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: var(--text-color);
 }
@@ -413,6 +531,8 @@ nav {
   position: absolute;
   top: 100%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: #2c2c2c;
   color: #f5f5f5;
@@ -421,9 +541,11 @@ nav {
   font-size: 0.9rem;
   font-family: lato;
   opacity: 0;
+  -webkit-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
   transition: var(--primary-transition);
 }
-.social-media--icon:hover~.social-media--span {
+.social-media--icon:hover ~ .social-media--span {
   opacity: 1;
 }
 .social-media--span::after {
@@ -431,6 +553,8 @@ nav {
   position: absolute;
   bottom: 100%;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   border: 4px solid transparent;
   border-bottom-color: #2c2c2c;
